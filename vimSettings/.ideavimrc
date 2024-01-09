@@ -27,6 +27,7 @@ nmap <leader>a <Action>(RecentFiles)
 nmap <leader>h <Action>(RecentLocations)
 
 nmap <leader>n <Action>(GotoSymbol)
+vmap <leader>n <Action>(GotoSymbol)
 
 nmap <leader>sh <Action>(LocalHistory.ShowHistory)
 
