@@ -24,10 +24,11 @@ nmap <leader>9 <Action>(ActivateVersionControlToolWindow)
 nmap <leader>10 <Action>(ActivateCommitToolWindow)
 
 nmap <leader>a <Action>(RecentFiles)
-nmap <leader>l <Action>(RecentLocations)
-nmap <leader>h <Action>(SwitchToLastOpenedFile)
-nmap <leader>n <Action>(GoToSymbol)
+nmap <leader>h <Action>(RecentLocations)
 
+nmap <leader>n <Action>(GotoSymbol)
+
+nmap <leader>sh <Action>(LocalHistory.ShowHistory)
 
 "Code"
 
@@ -39,7 +40,7 @@ nmap <leader>s <Action>(SaveAll)
 nmap , :action AceAction<CR>
 vmap , :action AceAction<CR>
 
-"" -- Map IDE actions to IdeaVim -- httpr://jb.gg/abva4t
+"" -- Map IDE actions to IdeaVim --
 "Code Edit"
 
 nmap <leader>R <Action>(Refactorings.QuickListPopupAction)
@@ -78,7 +79,7 @@ vmap <leader>ff <Action>(FindInPath)
 nmap <leader>t <Action>(SurroundWith)
 vmap <leader>t <Action>(SurroundWith)
 
-vmap <leader>cc <Action>(CommentByLineComment)
+nmap <leader>cc <Action>(CommentByLineComment)
 vmap <leader>cc <Action>(CommentByLineComment)
 
 "code navigation"
@@ -109,4 +110,4 @@ nmap <leader>db <Action>(ToggleLineBreakpoint)
 
 # plugins
 Plug 'tpope/vim-surround'
-set 'which-key'
+Plug 'TheBlob42/which-key'
