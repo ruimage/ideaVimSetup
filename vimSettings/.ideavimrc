@@ -1,0 +1,112 @@
+sethandler n:vim i:ide
+
+"plugins"
+
+
+"use system clipboard"
+set clipboard+=unnamed
+
+set scrolloff=5
+
+set incsearch
+let mapleader =" "
+
+"Navigation"
+nmap <leader>1 <Action>(ActivateProjectToolWindow)
+nmap <leader>2 <Action>(ActivateBookmarksToolWindow)
+nmap <leader>3 <Action>(ActivateFindToolWindow)
+nmap <leader>4 <Action>(ActivateRunToolWindow)
+nmap <leader>5 <Action>(ActivateDebugToolWindow)
+nmap <leader>6 <Action>(ActivateProblemsViewToolWindow)
+nmap <leader>7 <Action>(ActivateStructureToolWindow)
+nmap <leader>8 <Action>(ActivateServicesToolWindow)
+nmap <leader>9 <Action>(ActivateVersionControlToolWindow)
+nmap <leader>10 <Action>(ActivateCommitToolWindow)
+
+nmap <leader>a <Action>(RecentFiles)
+nmap <leader>l <Action>(RecentLocations)
+nmap <leader>h <Action>(SwitchToLastOpenedFile)
+nmap <leader>n <Action>(GoToSymbol)
+
+
+"Code"
+
+
+"Git"
+nmap <leader>k <Action>(CheckinProject)
+nmap <leader>s <Action>(SaveAll)
+
+nmap , :action AceAction<CR>
+vmap , :action AceAction<CR>
+
+"" -- Map IDE actions to IdeaVim -- httpr://jb.gg/abva4t
+"Code Edit"
+
+nmap <leader>R <Action>(Refactorings.QuickListPopupAction)
+vmap <leader>R <Action>(Refactorings.QuickListPopupAction)
+
+
+nmap <leader>rn <Action>(RenameElement)
+vmap <leader>rn <Action>(RenameElement)
+
+nmap <leader>rem <Action>(ExtractMethod)
+vmap <leader>rem <Action>(ExtractMethod)
+
+nmap <leader>rec <Action>(IntroduceConstant)
+vmap <leader>rec <Action>(IntroduceConstant)
+
+nmap <leader>rce <Action>(ExtractComponent)
+vmap <leader>rce <Action>(ExtractComponent)
+
+nmap <leader>rm <Action>(Move)
+vmap <leader>rm <Action>(Move)
+
+nmap <leader>e <Action>(ShowIntentionActions)
+
+nmap <leader>r <Action>(Replace)
+vmap <leader>r <Action>(Replace)
+
+nmap <leader>rr <Action>(ReplaceInPath)
+vmap <leader>rr <Action>(ReplaceInPath)
+
+nmap <leader>f <Action>(Find)
+vmap <leader>f <Action>(Find)
+
+nmap <leader>ff <Action>(FindInPath)
+vmap <leader>ff <Action>(FindInPath)
+
+nmap <leader>t <Action>(SurroundWith)
+vmap <leader>t <Action>(SurroundWith)
+
+vmap <leader>cc <Action>(CommentByLineComment)
+vmap <leader>cc <Action>(CommentByLineComment)
+
+"code navigation"
+nmap <leader><S-e> <Action>(GotoNextError)
+
+nmap > 0
+vmap > 0
+nmap S $
+vmap S $
+
+nmap h <down>
+nmap t <up>
+nmap . <left>
+nmap s <right>
+
+vmap h <down>
+vmap t <up>
+vmap . <left>
+vmap s <right>
+
+
+"Run and debug"
+
+nmap <leader>dr <Action>(Debug) "debug run
+nmap <leader>db <Action>(ToggleLineBreakpoint)
+
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+# plugins
+Plug 'tpope/vim-surround'
+set 'which-key'
